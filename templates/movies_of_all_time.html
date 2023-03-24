@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>gggg</title>
+</head>
+<body>
+<form action="/soviet" target="_blank">
+  <button>Советские фильмы</button>
+</form>
+<form action="/soviet" target="_blank">
+  <button>Мультфильмы</button>
+</form>
+<form action="/soviet" target="_blank">
+  <button>Новинки</button>
+</form>
+<form action="/movies_of_all_time" target="_blank">
+  <button>Фильмы всех времен</button>
+</form>
+<table>
+  <colgroup>
+    <col span="2" style="background:Fuchsia">
+    <!--<col span="2" style="background:violet"> С помощью этой конструкции задаем цвет фона для первых двух столбцов таблицы-->
+    <col style="background-color:violet"><!-- Задаем цвет фона для следующего (одного) столбца таблицы-->
+  </colgroup>
+  <tr>
+    <th>№ п/п</th>
+    <th>Пользователь</th>
+    <th>Результат, количество очков</th>
+    <th>Номер телефона</th>
+  </tr>
+      {% for el in data %}
+        <tr>
+          <td>{{loop.index}}</td>
+          <td>{{el[0]}}</td>
+          <td>{{el[1]}}</td>
+          <td>{{el[2]}}</td>
+          <td>{{el[3]}}</td>
+        </tr>
+      {% endfor %}
+
+</table>
+</body>
+</html>
